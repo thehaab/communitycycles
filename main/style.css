@@ -435,9 +435,7 @@ table .table__end {
   -webkit-appearance:none;
   margin:0
 }
-.table__multiplier [type=number] {
-  -moz-appearance:textfield
-}
+
 .table__single-button {
   text-align:right;
   width:40px
