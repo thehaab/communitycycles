@@ -1772,3 +1772,11 @@ footer img {
   line-height: 2;
 }
 
+.donate-section {
+  text-align: center;
+
+}
+
+donate-section a:hover {
+text-decoration: underline
+}
