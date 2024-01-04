@@ -68,7 +68,7 @@ html {
 #__nuxt,
 .layout,
 body {
-  min-height:100%
+  min-height:100%;
 }
 .layout {
   display:-webkit-box;
@@ -197,7 +197,7 @@ body {
 }
 :root {
   --prose-bottom-gap:0.25em;
-  --prose-top-gap:0.25em
+  --prose-top-gap:0.25em;
 }
 .additive-spacing {
   display:-webkit-box;
@@ -230,7 +230,7 @@ body {
   -webkit-text-size-adjust:100%;
   -moz-osx-font-smoothing:grayscale;
   -webkit-font-smoothing:antialiased;
-  color:var(--navy)
+  color:var(--white)
 }
 .h1,
 .u-style-serif {
@@ -268,7 +268,7 @@ small.u-style-label {
 h1,
 h2,
 h3 {
-  line-height:1;
+  line-height:1.5;
   margin:0
 }
 .u-strong,
@@ -1597,7 +1597,7 @@ option {
   margin-bottom:.625em
 }
 
-.bike-container {
+/* .bike-container {
   position: relative;
   width: 100%;
 }
@@ -1614,7 +1614,7 @@ option {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0); /* Transparent overlay */
+  background: rgba(0, 0, 0, 0); 
   transition: background 0.3s ease;
 }
 
@@ -1628,7 +1628,7 @@ option {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  pointer-events: none; /* Allow clicks to pass through to the image */
+  pointer-events: none; 
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -1641,12 +1641,12 @@ option {
 }
 
 .bike-container:hover .overlay {
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay on hover */
+  background: rgba(0, 0, 0, 0.5); 
 }
 
 .bike-container:hover .overlay-links {
-  opacity: 1; /* Show links on hover */
-}
+  opacity: 1;
+} */
 
 .hero-section {
   background-image: url('images/hero1.jpg'); /* Replace with the path to your hero image */
@@ -1661,6 +1661,7 @@ option {
 }
 
 .hero-content {
+  line-height: 3;
   max-width: 800px;
   margin: 0 auto;
 }
@@ -1705,10 +1706,11 @@ option {
   align-items: center;
 }
 
-.repair-section p {
+.repair-section h3 {
   background-color: #00000091;
   padding: var(--space-2xl);
   border-radius: .5rem;
+  line-height: 2;
 }
 
 .photo-credits p {
@@ -1731,7 +1733,7 @@ footer img {
 
 .quote-section {
   background-color: #052f0643;
-  padding: 200px;
+  padding: 200px 0 ;
   align-content: center;
 }
 
@@ -1757,3 +1759,8 @@ footer img {
 .copyright {
   margin-bottom: 1rem;
 }
+
+.section h2 {
+  line-height: 2;
+}
+
