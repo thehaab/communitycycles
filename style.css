@@ -43,7 +43,7 @@ a {
 }
 a,
 button {
-  color:inherit
+  color:rgb(255, 255, 255);
 }
 button {
   background:0 0;
@@ -247,7 +247,7 @@ body {
   text-transform:uppercase;
   font-weight:700;
   letter-spacing:.06em;
-  color:var(--gold);
+  color:var(--white);
   -webkit-user-select:none;
   -moz-user-select:none;
   -ms-user-select:none;
@@ -339,7 +339,7 @@ strong {
   font-style:italic
 }
 .prose em {
-  color:var(--gold)
+  color:var(--white)
 }
 .prose strong {
   font-style:italic;
@@ -469,7 +469,7 @@ table .table__end {
 }
 .prose a {
   font-style:italic;
-  color:var(--gold);
+  color:var(--white);
   font-weight:700;
   text-decoration:underline
 }
@@ -1320,6 +1320,8 @@ option {
   }
 }
 .logo {
+  background-color: white;
+  border-radius: 5%;
   width:161px;
   display:block;
   position:relative;
@@ -1672,13 +1674,16 @@ option {
   font-size: 1.2em;
   text-decoration: none;
   color: #fff;
-  background-color: #009505; /* Adjust the background color */
+  background-color: #0D4A8A;
+   /* Adjust the background color */
   border-radius: 5px;
   transition: background-color 0.3s ease;
+  margin: 2rem;
 }
 
 .cta-button:hover {
-  background-color: #45a049; /* Adjust the hover background color */
+  color: white;
+  background-color:#24A153;/* Adjust the hover background color */
 }
 
 .welcome-section {
@@ -1692,6 +1697,7 @@ option {
   display: flex;
   align-items: center;
   scroll-snap-align: start;
+  border-radius: 5%;
 }
 
 .repair-section {
@@ -1704,6 +1710,7 @@ option {
   height: 80vh; /* Adjust the height as needed */
   display: flex;
   align-items: center;
+  border-radius: 5%;
 }
 
 .repair-section h3 {
@@ -1735,6 +1742,7 @@ footer img {
   background-color: #052f0643;
   padding: 200px 0 ;
   align-content: center;
+  border-radius: 5%;
 }
 
 .quote-text {
