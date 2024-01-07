@@ -9,9 +9,7 @@ html {
 :before {
   box-sizing:inherit
 }
-body {
-  margin:0
-}
+
 blockquote,
 figure,
 ol,
@@ -68,7 +66,7 @@ html {
 #__nuxt,
 .layout,
 body {
-  min-height:100%;
+  min-height: 100%;
 }
 .layout {
   display:-webkit-box;
@@ -230,7 +228,10 @@ body {
   -webkit-text-size-adjust:100%;
   -moz-osx-font-smoothing:grayscale;
   -webkit-font-smoothing:antialiased;
-  color:var(--white)
+  color:var(--white);
+  min-height: 100%;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgb(0, 0, 0);
 }
 .h1,
 .u-style-serif {
@@ -1332,6 +1333,7 @@ option {
   height:auto
 }
 .hero {
+
   --gold:var(--gold-1)
 }
 .hero a {
@@ -1660,6 +1662,7 @@ option {
   height: 80vh; /* Adjust the height as needed */
   display: flex;
   align-items: center;
+  
 }
 
 .hero-content {
@@ -1779,4 +1782,19 @@ footer img {
 
 donate-section a:hover {
 text-decoration: underline
+}
+
+.wall-of-thanks {
+margin-top: 2em;
+text-align: center;
+}
+
+flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+flex-item {
+
 }
