@@ -1775,18 +1775,23 @@ footer img {
   line-height: 2;
 }
 
-.donate-section {
+.donate-section a {
   text-align: center;
-
+color: yellow;
 }
 
 donate-section a:hover {
-text-decoration: underline
+text-decoration: underline;
+
 }
 
 .wall-of-thanks {
 margin-top: 2em;
 text-align: center;
+}
+
+.wall-of-thanks a {
+  margin: 2rem;
 }
 
 flex-container {
