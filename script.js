@@ -56,6 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 const quotes = [
   "Life is like riding a bicycle. To keep your balance, you must keep moving. - Albert Einstein",
+  
   "Bicycling is a big part of the future. There's something wrong with a society that drives a car to work out in a gym. - Bill Nye",    "Life is like riding a bicycle. To keep your balance, you must keep moving. - Albert Einstein",
 
   "Bicycling is a big part of the future. It has to be. There's something wrong with a society that drives a car to work out in a gym. - Bill Nye",
