@@ -1800,6 +1800,12 @@ flex-container {
   align-items: center;
 }
 
+#quote-container {
+ background-color: #24A153;
+ padding: 2rem;
+ border-radius: 30px;
+}
+
 flex-item {
 
 }
