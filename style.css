@@ -1788,6 +1788,10 @@ text-decoration: underline;
 .wall-of-thanks {
 margin-top: 2em;
 text-align: center;
+display: grid;
+/* align-items: center;
+justify-content: center; */
+/* height: 100vh; */
 }
 
 .wall-of-thanks a {
@@ -1802,10 +1806,29 @@ flex-container {
 
 #quote-container {
  background-color: #24A153;
- padding: 2rem;
+ padding: 3rem;
+ margin: 3rem;
  border-radius: 30px;
+ text-align: center;
+
 }
 
-flex-item {
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 1rem;
+}
 
+.card {
+  padding: 1rem;
+/*   border: var(--BORDERS); */
+  background-color: #3a4778;
+  color: var(--LIGHT-COLOR);
+/*   border-radius: 20px; */
+  text-shadow: var(--FONTSHADOW) ;
+  box-shadow: var(--SHADOWS);
+  display: flex;
+  flex-flow: column wrap;
+  font-size: var(--FS-SM);
 }
