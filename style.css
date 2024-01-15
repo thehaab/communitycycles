@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 body {
-  
+  font-family: Montserrat, system-ui, monospace;
+
 }
 
 img {
@@ -14,13 +15,13 @@ focus {
 }
 
 .hero-section {
-  background-image: url('images/hero1.jpg'); /* Replace with the path to your hero image */
+  background-image: url('images/hero1.jpg');
   background-size: cover;
   background-position: center;
   color: #fff;
   text-align: center;
   padding: 100px 0;
-  height: 80vh; /* Adjust the height as needed */
+  height: 70vh;
   display: flex;
   align-items: center;
   
@@ -154,6 +155,11 @@ display: grid;
 
 }
 
+.wall-of-thanks h2 {
+  font-size: 1.5rem;
+display: block;
+}
+
 .wall-of-thanks a {
   margin: 2rem;
 }
@@ -177,12 +183,12 @@ flex-container {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-/*   gap: .5rem; */
+  gap: .5rem;
 }
 
 .card {
   padding: 1rem;
-  width: 10em;
+  width: 11em;
   background-color: #5c5c5c;
   color: var(--LIGHT-COLOR);
 
