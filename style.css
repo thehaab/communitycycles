@@ -8,60 +8,147 @@
   nav a {
     padding: 10px 0;
   }
+
 }
 
+/* CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
 body {
   font-family: Montserrat, system-ui, monospace;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
 }
 
 .logo {
   width: clamp(90px, 5vw, 100px);
   height: clamp(90px, 5vw, 100px);
   border: none;
+  padding: .5rem;
+  margin: .5rem;
   background-color: #fff;
+  display: inline;
 }
 nav {
-  background-color;
   color: #000000;
   padding: 1rem;
   text-align: center;
-  display: flex;
-  justify-content: space-between;
+  display: flexbox;
+  justify-content: space-evenly;
   align-items: center;
   position: sticky;
   top: 0;
   z-index: 100;
   max-width: 1200px; /* Set the maximum width */
-  margin: 0 auto; /* Center the navigation menu horizontally */
+  margin: rem auto; /* Center the navigation menu horizontally */
 }
 
 nav a {
   /* make nav items responsive and stay on screen until small screen sizes*/
   flex: 1;
+  padding: 1rem;
+  margin: 1rem;
+
   text-align: center;
   font-weight: 700;
   color: #fff;
   text-decoration: none;
+  line-height: 2;
 }
 nav a:hover {
-  color: #0D4A8A;
+  color: #b9ffea;
 }
 #cycle {
   font-family: Montserrat, monospace;
-  font-size: 54px;
-  color: rgb(255, 255, 255);
+  font-size:2em;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px #247887;
   font-weight: 900;
 }
 #textCycle {
   font-family: Montserrat, monospace;
-  font-size: 54px;
-  color: rgb(255, 255, 255);
+  font-size: 2em;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px #4A9A51;
   font-weight: 900;
+}
+/* gradient-border {
+  --borderWidth: 3px;
+  background: #1d1f203d;
+  position: relative;
+  border-radius: 1rem;
+} */
+.gradient-border:after {
+  content: '';
+  position: fixed;
+  top: calc(-1 * 1rem);
+  left: calc(-1 * 1rem);
+  height: calc(100% + 1 * 1rem);
+  width: calc(100% + 1 * 1rem);
+  background: linear-gradient(90deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  z-index: -1;
+  animation: animatedgradient 18s ease alternate infinite;
+  background-size:300% 300%; 
 }
 
 
+@keyframes animatedgradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+
+
 img {
-  max-width:100%;
+  max-width:100mvh;
   height:auto;
   border:none
 }
@@ -113,11 +200,10 @@ focus {
   color: #fff;
   text-align: center;
   padding: 100px 0;
-  height: 80vh; /* Adjust the height as needed */
+  height: 50vh; /* Adjust the height as needed */
   display: flex;
-  align-items: center;
-  scroll-snap-align: start;
-  border-radius: 5%;
+  align-items: center;;
+  font-size: 1.5rem;
 }
 
 .repair-section {
@@ -135,8 +221,6 @@ focus {
 
 .mission-section h3 {
   background-color: #00000091;
-  padding: var(--space-2xl);
-  border-radius: .5rem;
   line-height: 2;
   margin: 2rem;
 }
@@ -196,12 +280,13 @@ footer img {
 .donate-section a {
   text-align: center;
 color: yellow;
+text-decoration: none;
 }
 
-donate-section a:hover {
-text-decoration: underline;
-
-}
+.donate-section a:hover {
+  font-size-adjust: ;
+  text-decoration: underline;
+  }
 
 .wall-of-thanks {
 margin-top: 2em;
@@ -213,6 +298,7 @@ display: grid;
 .wall-of-thanks h2 {
   font-size: 1.5rem;
 display: block;
+margin: 2rem;
 }
 
 .wall-of-thanks a {
@@ -227,11 +313,8 @@ flex-container {
 
 #quote-container {
  background-color: #24A153;
- padding: 3rem;
- margin: 3rem;
- border-radius: 30px;
+ padding: 4rem;
  text-align: center;
-
 }
 
 .container {
@@ -252,4 +335,8 @@ flex-container {
   display: flex;
   flex-flow: column wrap;
   font-size: var(--FS-SM);
+}
+.bottom {
+  margin-top: auto;
+  text-align: center;
 }
