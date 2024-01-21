@@ -49,3 +49,14 @@ displayNextQuote();
 
 // Change quote every 10 seconds (adjust as needed)
 setInterval(displayNextQuote, 10000);
+
+const words = ["bi", "re", "uni", "free", "tri", "up", "life"];
+let index = 0;
+
+function changeWord() {
+  const wordElement = document.getElementById("textCycle");
+  wordElement.textContent = words[index];
+  index = (index + 1) % words.length;
+}
+
+setInterval(changeWord, 3000); // Change the word every 2 seconds

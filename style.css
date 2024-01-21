@@ -1,9 +1,64 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+  }
+
+  nav a {
+    padding: 10px 0;
+  }
+}
+
 body {
   font-family: Montserrat, system-ui, monospace;
-
 }
+
+.logo {
+  width: clamp(90px, 5vw, 100px);
+  height: clamp(90px, 5vw, 100px);
+  border: none;
+  background-color: #fff;
+}
+nav {
+  background-color;
+  color: #000000;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  max-width: 1200px; /* Set the maximum width */
+  margin: 0 auto; /* Center the navigation menu horizontally */
+}
+
+nav a {
+  /* make nav items responsive and stay on screen until small screen sizes*/
+  flex: 1;
+  text-align: center;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+}
+nav a:hover {
+  color: #0D4A8A;
+}
+#cycle {
+  font-family: Montserrat, monospace;
+  font-size: 54px;
+  color: rgb(255, 255, 255);
+  font-weight: 900;
+}
+#textCycle {
+  font-family: Montserrat, monospace;
+  font-size: 54px;
+  color: rgb(255, 255, 255);
+  font-weight: 900;
+}
+
 
 img {
   max-width:100%;
@@ -17,7 +72,7 @@ focus {
 .hero-section {
   background-image: url('images/hero1.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: top center;
   color: #fff;
   text-align: center;
   padding: 100px 0;
