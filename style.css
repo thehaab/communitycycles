@@ -10,6 +10,15 @@
   }
 
 }
+.fa-bars {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .fa-bars {
+    display: block;
+  }
+}
 
 /* CSS Reset */
 html, body, div, span, applet, object, iframe,
@@ -41,7 +50,7 @@ body {
   line-height: 1;
 }
 ol, ul {
-  list-style: none;
+  list-style: disc;
 }
 blockquote, q {
   quotes: none;
@@ -58,6 +67,16 @@ table {
 body {
   font-family: Montserrat, system-ui, monospace;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+}
+.h2 {
+  background-color:   #00000091;
+  font-size: clamp(.75em, 2em, 2.5vw);
+  line-height:2.5;
+  color: #ffffff;
+  text-align: left;
+  text-shadow: 2px 2px 4px #000000;
+  font-weight: 900;
+  padding: 1rem;
 }
 
 .logo {
@@ -100,7 +119,7 @@ nav a:hover {
 }
 #cycle {
   font-family: Montserrat, monospace;
-  font-size:2em;
+  font-size:3em;
   color: #ffffff;
   text-shadow: 2px 2px 4px #247887;
   font-weight: 900;
@@ -125,9 +144,10 @@ nav a:hover {
   left: calc(-1 * 1rem);
   height: calc(100% + 1 * 1rem);
   width: calc(100% + 1 * 1rem);
-  background: linear-gradient(30deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  background: linear-gradient(30deg, #f795334c, #f36f5554, #ef4e7c58, #a166ab66, #5073b85f, #1098ad62, #07b39c6b, #6fba826a);
   z-index: -1;
-  animation: animatedgradient 22s ease alternate infinite;
+  animation: animatedgradient 22s ease infinite;
+  opacity: 0.5;
   background-size:300% 300%; 
 }
 
@@ -248,10 +268,11 @@ footer img {
   padding: 200px 0 ;
   align-content: center;
   border-radius: 5%;
+  
 }
 
 .quote-text {
-  font-size: 2rem;
+  font-size: clamp(.75em, 2vw, 2.5vw);
   line-height: 1.5;
   color: #ffffff;
   text-align: center;
@@ -284,7 +305,6 @@ text-decoration: none;
 }
 
 .donate-section a:hover {
-  font-size-adjust: 10%;
   text-decoration: underline;
   }
 
@@ -312,9 +332,14 @@ flex-container {
 }
 
 #quote-container {
- background-color: #24A153;
- padding: 4rem;
- text-align: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem; /* adjust as needed */
+  background-color: #24A153;
+  padding: 4rem;
+  text-align: center;
+  line-height: 2;
+ ;
 }
 
 .container {
@@ -327,15 +352,24 @@ flex-container {
 .card {
   padding: 1rem;
   width: 11em;
-  background-color: #5c5c5c;
-  color: var(--LIGHT-COLOR);
-
+  background-color: #5c5c5c4d;
+  color: #ffffff;
+  border-top: rgba(193, 172, 56, 0.333) 1px solid;
+  border-left: rgb(193, 172, 56, 0.333) 1px solid;
+  border-radius:  1em 3em 1em 3em;
   text-shadow: var(--FONTSHADOW) ;
-  box-shadow: var(--SHADOWS);
+  box-shadow: 1em 1em 55px 1px #00000058;
   display: flex;
   flex-flow: column wrap;
   font-size: var(--FS-SM);
+  transition: box-shadow .5s ease-in-out;
 }
+.card:hover {
+  box-shadow: -.5em -.5em 10px 1px #0900701b;
+  transition: ease-in-out .25s;
+}
+
+
 .bottom {
   margin-top: auto;
   text-align: center;
