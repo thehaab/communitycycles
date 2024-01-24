@@ -63,3 +63,61 @@ setInterval(changeWord, 3000); // Change the word every 2 seconds
 
 const year = new Date().getFullYear();
 document.getElementById('year').textContent = year;
+
+//make a calendar for the current month
+document.addEventListener('DOMContentLoaded', () => {    
+  const calendar = document.getElementById('calendar');
+  const date = new Date();
+  const month = date.getMonth();
+  const daysInMonth = new Date(year, month + 1, 0).getDate();
+  const firstDay = new Date(year, month, 1).getDay();
+  const lastDay = new Date(year, month, daysInMonth).getDay();
+  const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  const monthName = date.toLocaleString('default', { month: 'long' });
+  const calendarTitle = document.createElement('h2');
+  calendarTitle.textContent = `${monthName} ${year}`;
+  calendar.appendChild(calendarTitle);
+  const calendarTable = document.createElement('table');
+  calendar.appendChild(calendarTable);
+  const calendarHeader = document.createElement('thead');
+  calendarTable.appendChild(calendarHeader);
+  const headerRow = document.createElement('tr');
+  calendarHeader.appendChild(headerRow);
+  days.forEach(day => {
+    const dayHeader = document.createElement('th');
+    dayHeader.textContent = day;
+    headerRow.appendChild(dayHeader);
+  })
+  const calendarBody = document.createElement('tbody');
+  calendarTable.appendChild(calendarBody);
+  let day = 1;
+  let row = document.createElement('tr');
+  calendarBody.appendChild(row);
+  for (let i = 0; i < firstDay; i++) {
+    const cell = document.createElement('td');
+    row.appendChild(cell);
+  }
+  for (let i = firstDay; i < 7; i++) {
+    const cell = document.createElement('td');
+    cell.textContent = day;
+    row.appendChild(cell);
+    day++;
+  }
+  while (day <= daysInMonth) {
+    if (row.children.length === 7) {
+      row = document.createElement('tr');
+      calendarBody.appendChild(row);
+    }
+    const cell = document.createElement('td');
+    cell.textContent = day;
+    row.appendChild(cell);
+    day++;
+  }
+  for (let i = lastDay + 1; i < 7; i++) {
+    const cell = document.createElement('td');
+    row.appendChild(cell);
+  }
+  // add event to calendar
+
+
+});
