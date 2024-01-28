@@ -403,8 +403,8 @@ margin: 2rem;
 }
 
 .card {
-  padding: 3em;
-  width: 30vw;
+  padding: 3vh;
+  width: clamp(9em, 18vw, 20em);
   background-color: #5c5c5c4d;
   color: #ffffff;
   border-top: rgba(193, 172, 56, 0.333) 1px solid;
@@ -414,7 +414,7 @@ margin: 2rem;
   box-shadow: 1em 1em 55px 1px #00000058;
   display: flex;
   flex-flow: column wrap;
-  font-size: var(--FS-SM);
+  font-size: clamp(.75em, 2em, 2.5vw);
   transition: box-shadow .5s ease-in-out;
 }
 .card:hover {
