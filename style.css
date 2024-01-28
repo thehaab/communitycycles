@@ -178,8 +178,43 @@ nav a:hover {
 	}
 }
 
+.menu {
+  padding: 3rem;
+  max-width: 1200px;
+  display: flex;
+  gap: clamp(2rem, 8vw, 4rem);
+}
 
+button {
+background: transparent;
+border: 10px solid var(--button-color, black);
+border-radius: 1rem;
+}
 
+.btn-one {
+  --button-color: #ff7700;
+}
+
+.btn-one .line {
+  fill: var(--button-color);
+  transition: y 1s ease-in-out;
+  transform-origin: center;
+}
+.btn-one:hover :is(.top, .bottom) {
+  y: 45px;
+}
+.btn-one:hover .top {
+  transform: rotate(45deg);
+} 
+.btn-one:hover .bottom {
+  transform: rotate(-45deg);
+}
+.btn-one:hover .middle {
+  opacity: 0;
+}
+.btn-one[aria-expanded="true"] .top {
+  transform: rotate(45deg);
+}
 
 img {
   max-width:100mvh;
