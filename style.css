@@ -1,25 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 @media (max-width: 600px) {
-  nav {
+  
+}
+@media screen and (max-width: 600px) {
+  .fa-bars {
+    display: block;
+  }nav {
     flex-direction: column;
   }
 
   nav a {
     padding: 10px 0;
   }
-
-}
 .fa-bars {
   display: none;
 }
-
-@media screen and (max-width: 600px) {
-  .fa-bars {
-    display: block;
-  }
+.pin {
+  display: none;
 }
-
+}
+.break {
+  padding: 2vh;
+  margin: 2vh;
+}
 /* CSS Reset */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -423,7 +427,10 @@ margin: 2rem;
   margin-top: auto;
   text-align: center;
 }
+
+
 #calendar {
+  margin: 0 auto;
   background-color: #00000091;
   border: 1px solid #ffc80091;
   box-shadow: 1em 1em 55px 1px #00000058;

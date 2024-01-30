@@ -118,6 +118,22 @@ document.addEventListener('DOMContentLoaded', () => {
     row.appendChild(cell);
   }
   // add event to calendar
+  const event = document.getElementById('event');
+  const eventDate = document.getElementById('eventDate');
+  const eventTime = document.getElementById('eventTime');
+  const eventButton = document.getElementById('eventButton');
+  eventButton.addEventListener('click', () => {
+    const date = eventDate.value;
+    const time = eventTime.value;
+    const day = date.slice(8);
+    const month = date.slice(5, 7);
+    const year = date.slice(0, 4);
+    const eventCell = document.querySelector(`td:nth-child(${day})`);
+    const eventDiv = document.createElement('div');
+    eventDiv.textContent = `${time} ${event.value}`;
+    eventCell.appendChild(eventDiv);
+  })
+  
 
 
 });
