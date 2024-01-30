@@ -28,7 +28,7 @@
   .pin {
     display: none;
   }
-  .center {
+  label {
     display: none;
   }
   nav a {
@@ -81,34 +81,112 @@ body {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
   margin: 0
 }
-.center {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+
+label .menu {
   position: absolute;
-  width: 50px;
+  right: -80px;
+  top: 0;
+  z-index: 100;
+  width:100px;
+  height: 20px;
+  background: #ff000000;
+  border-radius: 13vw 13vw 13vw 13vw;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  box-shadow: 0 0 0 0 #000000, 0 0 0 0 #000000;
+  cursor: pointer;
+  
 }
 
-.center:before,
-.center:after,
-.center div {
-  background: #fff;
-  content: "";
+label .hamburger {
+  position: absolute;
+  top: 55px;
+  left: 50px;
+  width: 30px;
+  height: 2px;
+  background: #ffffff;
   display: block;
-  height: 6px;
-  border-radius: 3px;
-  margin: 7px 0;
-  transition: 0.5s;
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
 }
-.center:hover:before {
-  transform: translateY(12px) rotate(135deg);
+
+label .hamburger:after, label .hamburger:before {
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
 }
-.center:hover:after {
-  transform: translateY(-12px) rotate(-135deg);
+
+label .hamburger:before { top: -10px; }
+
+label .hamburger:after { bottom: -10px; }
+
+label input { display: none; }
+
+label input:checked + .menu {
+  box-shadow: 0 0 0 100vw #000000, 0 0 0 100vh #000000;
+  border-radius: 0;
+  
 }
-.center:hover div {
-  transform: scale(0);
+
+label input:checked + .menu .hamburger {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  
 }
+
+label input:checked + .menu .hamburger:after {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  bottom: 0;
+  
+}
+
+label input:checked + .menu .hamburger:before {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  top: 0;
+  
+}
+
+label input:checked + .menu + ul { opacity: 1; }
+
+label ul {
+  z-index: 200;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  -webkit-transition: .25s 0s ease-in-out;
+  transition: .25s 0s ease-in-out;
+}
+
+label a {
+  margin-bottom: 1em;
+  display: block;
+  color: #f38630;
+  text-decoration: none;
+  
+}
+
+h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 80%;
+  text-align: center;
+}
+
 
 .break {
   padding: 2vh;
