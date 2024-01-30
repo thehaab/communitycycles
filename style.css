@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-@media (max-width: 600px) {
-  
-}
+
 @media screen and (max-width: 600px) {
   .fa-bars {
     display: block;
@@ -11,6 +9,7 @@
   }
 
   nav a {
+    display: none;
     padding: 10px 0;
   }
 .fa-bars {
@@ -18,11 +17,23 @@
 }
 .pin {
   display: none;
+}}
+
+@media (max-width: 600px) {
+  .pin {
+    display: flex;
+  }
 }
-}
-.break {
-  padding: 2vh;
-  margin: 2vh;
+@media (min-width: 600px) {
+  .pin {
+    display: none;
+  }
+  .center {
+    display: none;
+  }
+  nav a {
+    display: inline;
+  }
 }
 /* CSS Reset */
 html, body, div, span, applet, object, iframe,
@@ -68,7 +79,43 @@ table {
 body {
   font-family: Montserrat, system-ui, monospace;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+  margin: 0
 }
+.center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 50px;
+}
+
+.center:before,
+.center:after,
+.center div {
+  background: #fff;
+  content: "";
+  display: block;
+  height: 6px;
+  border-radius: 3px;
+  margin: 7px 0;
+  transition: 0.5s;
+}
+.center:hover:before {
+  transform: translateY(12px) rotate(135deg);
+}
+.center:hover:after {
+  transform: translateY(-12px) rotate(-135deg);
+}
+.center:hover div {
+  transform: scale(0);
+}
+
+.break {
+  padding: 2vh;
+  margin: 2vh;
+}
+
+
 .h2 {
   background-color:   #00000091;
   border: 1px solid #ffc80091;
@@ -77,20 +124,26 @@ body {
   font-size: clamp(.75em, 2em, 2.5vw);
   line-height:2;
   color: #ffffff;
-  text-align: left;
+  text-align: center;
   text-shadow: 2px 2px 4px #000000;
   font-weight: 900;
   padding: .5rem;
 }
-
+header {
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #ffffff00;
+  
+}
 .logo {
   width: clamp(90px, 5vw, 100px);
   height: clamp(90px, 5vw, 100px);
   border: none;
   padding: .5rem;
   margin: .5rem;
-  background-color: #fff;
-  display: inline;
+  background-color: #fff;  
 }
 nav {
   color: #000000;
@@ -158,7 +211,7 @@ nav a:hover {
   left: calc(-1 * 1rem);
   height: calc(100% + 1 * 1rem);
   width: calc(100% + 1 * 1rem);
-  background: linear-gradient(-333deg, #f795338d, #f36f5575, #ef4e7c8a, #a166ab77, #5073b86e, #1098ad6a, #07b39c7e, #6fba827c);
+  background: linear-gradient(-333deg, #f795338d, #f36f55b2, #ef4e7cae, #a166ab77, #5073b89e, #1098adb1, #07b39ce0, #6fba82);
   z-index: -1;
   animation: animatedgradient 22s ease-in-out infinite;
   opacity: 0.5;
