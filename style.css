@@ -552,7 +552,24 @@ margin: 2rem;
   box-shadow: -.5em -.5em 10px 1px #0900701b;
   transition: ease-in-out .25s;
 }
-
+.cardSource {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+.source {
+  color: grey;
+  font-size: 16px;
+}
+maxWidth {
+  max-width: 2400px;
+  height: auto;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
 
 .bottom {
   margin-top: auto;
