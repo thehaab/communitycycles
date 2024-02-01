@@ -213,7 +213,7 @@ header {
   align-items: center;
   text-align: center;
   background-color: #ffffff00;
-  
+  display: grid;
 }
 .logo {
   width: clamp(90px, 5vw, 100px);
@@ -224,17 +224,14 @@ header {
   background-color: #fff;  
 }
 nav {
-  color: #000000;
-  padding: 1rem;
+  margin: 0 auto;
   text-align: center;
-  display: flexbox;
-  justify-content: space-evenly;
-  align-items: center;
+  color: #000000;
+  text-align: center;
+  display:;
   position: sticky;
-  top: 0;
-  z-index: 100;
-  max-width: 1200px; /* Set the maximum width */
-  margin: rem auto; /* Center the navigation menu horizontally */
+  background: linear-gradient(-333deg, #f795338d, #f36f55b2, #ef4e7cae, #a166ab77, #5073b89e, #1098adb1, #07b39ce0, #6fba82);
+  box-shadow: 1em 1em 55px 1px #000000;
 }
 
 nav a {
