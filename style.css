@@ -223,13 +223,43 @@ header {
   margin: .5rem;
   background-color: #fff;  
 }
+.logo:hover {
+  transform: scale(1.1);
+}
+label ul {
+  z-index: 200;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  -webkit-transition: opacity .25s ease-in-out;
+  transition: opacity .25s ease-in-out;
+}
+
 nav {
   margin: 0 auto;
   text-align: center;
   color: #000000;
   text-align: center;
-  display:;
-  position: sticky;
+  display: flexbox;
+  position: sticky; /* Add this line */
+  top: 0; /* Add this line */
+  background: linear-gradient(-333deg, #f795338d, #f36f55b2, #ef4e7cae, #a166ab77, #5073b89e, #1098adb1, #07b39ce0, #6fba82);
+  box-shadow: 1em 1em 55px 1px #000000;
+  -webkit-transition: background .25s ease-in-out;
+  transition: background .25s ease-in-out;
+}
+}
+nav {
+  margin: 0 auto;
+  text-align: center;
+  color: #000000;
+  text-align: center;
+  display: flexbox;
+  position: sticky; /* Add this line */
+  top: 0; /* Add this line */
   background: linear-gradient(-333deg, #f795338d, #f36f55b2, #ef4e7cae, #a166ab77, #5073b89e, #1098adb1, #07b39ce0, #6fba82);
   box-shadow: 1em 1em 55px 1px #000000;
 }
