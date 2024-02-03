@@ -4,44 +4,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <meta name="color-scheme" content="light dark ">
+  <meta name="color-scheme" content="dark light ">
   <link rel="icon" type="image/x-icon" href="images/iconLG.png">
   <title>Community Cycles Seguin</title>
+  <meta name="description" content="Community Cycles Seguin is a grassroots non-profit community bike shop. By offering tools, education, and workspace, we empower individuals with life-changing transportation solutions, nurturing active community involvement to realize our vision. Our commitment involves educating those interested in bicycles and maintenance, and reviving bikes to get back on the streets and trails of Seguin, Texas, ensuring accessibility for everyone.">
   <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
+  <script src="https://kit.fontawesome.com/5acbdeca5e.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
-  <div class="layout">
-  <header class="top">
-    <nav class="wrap">
-      <a href="/" class="logo u-style-serif nuxt-link-exact-active nuxt-link-active hidden"><img src="images/logo.png" width="161" height="38" alt="Community Cycles Seguin logo"></a>
-    <ul class="top">
-      <li><a href="index.html" class="">Home</a></li> 
-      <li><a href="bikes.html" class="">Bikes</a></li> 
-      <li><a href="parts.html" class="">Parts</a></li> 
-      <li><a href="support.html" class="">Support</a></li> 
-      <li><a href="calendar.html" class="">Calendar</a></li> 
-    </ul>
-  </nav>
+<body class="maxWidth">
+  <!-- Give the page an animated gradient background-->
+  <div class="gradient-border">
+  <header >  <!-- Logo -->
+      <a href="/"><img class="logo" src="images/logo.png" width="161" height="38" alt="Community Cycles Seguin logo"></a> 
+    <nav class="">
+      <label>
+        <input type="checkbox">
+        <span class="menu"> <span class="hamburger"></span> </span>
+        <ul>
+          <li> <a href="#">Home</a> </li>
+          <li> <a href="#">About</a> </li>
+          <li> <a href="#">Contact</a> </li>
+        </ul>
+        </label>
+
+           
+      <!-- pin icon with link to map location -->
+        <a class="pin" href="#map"><img class="pin" src="images/pinIcon.png" alt="pin icon for map" width="50vw"></a>
+      <!-- Navigation links (hidden by default) -->
+      <a href="index.html" class="">Home</a> 
+      <a href="bikes.html" class="">Bikes</a>
+      <a href="parts.html" class="">Parts</a>
+      <a href="https://www.zeffy.com/en-US/donation-form/0fe89580-6a47-4894-8def-781529a668ed" class="">Support</a>
+      <a href="#calendar">Calendar</a>
+      <a href="index-es.html">Español</a>
+    </nav>
   </header>
   <main class="content">
     <h1>Bikes</h1>
     <p>Our inventory is always changing. Check back often to see what's new.</p>
     <div class="bikes">
-      <div class="bike">
+      <div class="bike card">
         <img src="images/bike1.jpg" alt="Bike 1">
         <h2>Mountain Bike</h2>
         <p>Great for off-road adventures.</p>
         <p>$500</p>
       </div>
-      <div class="bike">
+      <div class="bike card">
         <img src="images/bike2.jpg" alt="Bike 2">
         <h2>Road Bike</hh2>
         <p>Perfect for long rides on pavement.</p>
         <p>$400</p>
       </div>
-      <div class="bike">
+      <div class="bike card">
         <img src="images/bike3.jpg" alt="Bike 3">
         <h2>City Bike</h2>
         <p>Great for getting around town.</p>
