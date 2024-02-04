@@ -36,7 +36,7 @@
   }
 }
 /* CSS Reset */
-/* html, body, div, span, applet, object, iframe,
+html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
@@ -57,7 +57,7 @@ time, mark, audio, video {
   vertical-align: baseline;
 } */
 /* HTML5 display-role reset for older browsers */
-/* article, aside, details, figcaption, figure, 
+ article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
@@ -75,12 +75,67 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-} */
+}
 body {
   font-family: Montserrat, system-ui, monospace;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
   font-size: clamp(1em, 2.5vw, 2.5em);
+
 }
+ /* Style the navbar */
+ #navbar {
+  overflow: hidden;
+  background: linear-gradient(-333deg, #743a00, #ff8a8a, #6c001f, #ed84ff, #001b51, #8cf0ff, #006154, #87ffa5);
+  box-shadow: 0 4px 8px 1em rgba(0, 0, 0, 0.2);
+}
+
+/* Navbar links */
+#navbar a {
+  float: left;
+  display: block;
+  color: #ffffff;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+} 
+nav a {
+  /* make nav items responsive and stay on screen until small screen sizes*/
+  flex: 1;
+  padding: 1rem;
+ /*  margin: 1rem; */
+  text-align: center;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  line-height: 2;
+}
+nav a:hover {
+  color: #b9ffea;
+}
+
+  a:hover {
+    transform: scale(1.1);
+  }
+  a:active {
+    opacity: 0.6;
+  }
 h1 {
   font-size: 3em;
   line-height: 1.5;
@@ -237,34 +292,8 @@ label ul {
   transition: opacity .25s ease-in-out;
 }
 
-nav a {
-  /* make nav items responsive and stay on screen until small screen sizes*/
-  flex: 1;
-  padding: 1rem;
- /*  margin: 1rem; */
 
-  text-align: center;
-  font-weight: 700;
-  color: #fff;
-  text-decoration: none;
-  line-height: 2;
-}
-nav a:hover {
-  color: #b9ffea;
-}
 
-  a:hover {
-    transform: scale(1.1);
-  }
-  a:active {
-    opacity: 0.6;
-  }
-.pin {
-  display: block;
-  position: relative;
-  top: -70px;
-  left: -100px;
-}
 #cycle {
   font-family: Montserrat, monospace;
   font-size:3em;
@@ -376,15 +405,11 @@ focus {
   align-items: center;
   justify-content: center;
 }
-
-}
-
 .hero-content {
   line-height: 3;
   /* max-width: 800px; */
   margin: 0 auto;
 }
-
 .cta-button {
   display: inline-block;
   padding: 15px 30px;
@@ -639,7 +664,7 @@ th {
   background-color: #383737;
 }
 .full-width {
-  width: 100vw;  
+  width: 98vw;  
   text-align: center;
   margin-top: 9vh;
   margin-bottom: 6vh;
