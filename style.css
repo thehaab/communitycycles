@@ -367,7 +367,7 @@ border-radius: 1rem;
   transform-origin: center;
 }
 .btn-one:hover :is(.top, .bottom) {
-  y: 45px;
+  transform: translateY(1rem);
 }
 .btn-one:hover .top {
   transform: rotate(45deg);
@@ -397,7 +397,7 @@ focus {
   background-position: top center;
   color: #fff;
   text-align: center;
-  padding: ;
+  padding: 1rem;
   height: 70vh;
   align-items: center;
   display: flex;
