@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-// When the user scrolls the page, execute myFunction
+/* // When the user scrolls the page, execute myFunction
 window.onscroll = function() {myFunction()};
 
 // Get the navbar
@@ -154,4 +154,4 @@ function myFunction() {
   } else {
     navbar.classList.remove("sticky");
   }
-} 
+}  */

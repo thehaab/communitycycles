@@ -173,6 +173,9 @@ body {
     #87ffa5
   );
   box-shadow: 0 4px 8px 1em rgba(0, 0, 0, 0.2);
+  transition: 0.5s ease-in-out;
+  z-index: 2000;
+  transform: translateZ(0);
 }
 
 /* Navbar links */
@@ -192,9 +195,10 @@ body {
 
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
 .sticky {
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
+  transition: top ease-in-out .5s;
 }
 
 /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
@@ -237,7 +241,7 @@ label .menu {
   position: absolute;
   right: -80px;
   top: 0;
-  z-index: 100;
+  z-index: 1;
   width: 100px;
   height: 20px;
   background: #ff000000;
@@ -395,7 +399,7 @@ label ul {
   font-weight: 900;
   /* position:relative; */
 }
-/* gradient-border {
+/* .gradient-border {
   --borderWidth: 3px;
   background: #1d1f203d;
   position: relative;
@@ -422,7 +426,7 @@ label ul {
   z-index: -1;
   animation: animatedgradient 22s ease-in-out infinite;
   opacity: 1;
-  background-size: 300% 300%;
+  background-size:;
 }
 
 @keyframes animatedgradient {
@@ -605,15 +609,7 @@ footer img {
   line-height: 2;
 }
 
-.donate-section a {
-  text-align: center;
-  color: yellow;
-  text-decoration: none;
-}
 
-.donate-section a:hover {
-  text-decoration: underline;
-}
 
 .wall-of-thanks {
   margin-top: 2em;
@@ -685,11 +681,9 @@ footer img {
   font-size: 16px;
 }
 maxWidth {
-  max-width: 2400px;
-  height: auto;
-  border: none;
-  padding: 0;
-  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .bottom {
@@ -718,36 +712,27 @@ maxWidth {
   margin-bottom: 6vh;
 }
 .donate-section {
-  text-align: center;
-  padding: 1rem;
-  margin: 1rem;
-  background-color: #00000091;
-  border: 1px solid #ffc80091;
-  box-shadow: 1em 1em 55px 1px #00000058;
-  border-radius: 1em 1em 1em 1em;
-  font-size: clamp(0.75em, 2em, 2.5vw);
-  line-height: 2;
-  color: #ffffff;
-  text-align: center;
-  text-shadow: 2px 2px 4px #000000;
-  font-weight: 900;
-  padding: 0;
-  margin-top: 6vh;
-  margin-bottom: 6vh;
+ 
 }
-#heart {
-  content: var(--bg-image);
-  opacity: 0.1;
-  z-index: -10;
-  position: absolute; /* Add this line */
-}
+.donate-section a {
+    text-align: center;
+    color: yellow;
+    text-decoration: none;
+    transition: 1s ease-in-out;
+  }
+  
+  .donate-section a:hover {
+    filter:drop-shadow(0px -2px 0px #ffffff);
+  }
+
 #givingBike {
-  transition: .3s ease-in-out;
-  position: relative; /* Add this line */
+  transition: .5s ease-in-out;
+
+  
 }
 #givingBike:hover {
   transform: scale(1.03);
-  z-index: 1; /* Add this line */
+  filter:saturate(200%);
 }
 
 #calendar {
