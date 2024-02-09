@@ -426,7 +426,7 @@ label ul {
   z-index: -1;
   animation: animatedgradient 22s ease-in-out infinite;
   opacity: 1;
-  background-size:;
+  background-size: 300% 300%;
 }
 
 @keyframes animatedgradient {
