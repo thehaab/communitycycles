@@ -611,20 +611,19 @@ footer img {
 
 
 
-.wall-of-thanks {
+ .wall-of-thanks {
   margin-top: 2em;
-  text-align: center;
-  display: grid;
+
+
 }
 
 .wall-of-thanks h2 {
   font-size: 1.5rem;
-  display: block;
-  margin: 2rem;
+  margin: 1rem;
 }
 
 .wall-of-thanks a {
-  margin: 2rem;
+  margin: 1rem;
 }
 
 .flex-container {
@@ -644,8 +643,7 @@ footer img {
 }
 
 .container {
-  display: flex;
-  flex-flow: row wrap;
+
   justify-content: center;
   gap: 0.1vw;
 }
@@ -711,9 +709,6 @@ maxWidth {
   margin-top: 6vh;
   margin-bottom: 6vh;
 }
-.donate-section {
- 
-}
 .donate-section a {
     text-align: center;
     color: yellow;
@@ -775,4 +770,14 @@ th {
   text-align: center;
   margin-top: 9vh;
   margin-bottom: 6vh;
+}
+
+.scroller {
+  max-width: 600px;
+  outline: 3px solid lime;
+}
+
+.scroller_inner {
+  display: flex;
+  gap: 1rem;
 }
