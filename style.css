@@ -163,19 +163,20 @@ body {
   overflow: hidden;
   background: linear-gradient(
     -333deg,
-    #743a00,
-    #ff8a8a,
-    #6c001f,
+    #ffdbb7,
+    #ff7e7e,
+    #ff85a8,
     #ed84ff,
-    #001b51,
-    #8cf0ff,
-    #006154,
-    #87ffa5
+    #81abff,
+    #79edff,
+    #7cffee,
+    #83ffa2
   );
-  box-shadow: 0 4px 8px 1em rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 1em rgba(255, 255, 255, 0.033);
   transition: 0.5s ease-in-out;
   z-index: 2000;
   transform: translateZ(0);
+  border: .333em outset #ffffff;
 }
 
 /* Navbar links */
@@ -184,7 +185,7 @@ body {
   display: block;
   color: #ffffff;
   text-align: center;
-  padding: 14px;
+  padding: 1px 1rem;
   text-decoration: none;
 }
 
